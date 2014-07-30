@@ -1,0 +1,487 @@
+<div class="container order">
+<div class="row" style="margin-top: 30px;">
+  <div class="col-sm-8">
+      <form class="form-horizontal">
+        <div class="form-group">
+          <div class="col-sm-8">
+            <div class="input-group">
+              <span class="input-group-addon">품명</span>
+              <input type="text" name="book_quantity" class="form-control" placeholder="예)학원교습지">
+            </div>
+          </div>
+        </div>
+      </form>
+  </div>
+  <div class="col-sm-4">
+      <button type="button" class="btn btn-primary pull-right calc">계산하기</button>
+  </div>
+</div>
+<div class="row">
+<div class="col-sm-4">
+<h4>표지</h4>
+<form class="form-horizontal paper_form_input" id="paper_cover">
+  <fieldset>
+    <legend>용지입력</legend>
+    <div class="form-group">
+      <div class="col-sm-12">
+        <div class="input-group">
+          <span class="input-group-addon">수량</span>
+          <input type="text" name="book_quantity" class="form-control" placeholder="예)3000">
+          <span class="input-group-addon">부</span>
+        </div>
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="col-sm-12">
+        <div class="input-group">
+          <span class="input-group-addon">지종</span>
+          <select class="form-control" name="paper_kind">
+          </select>
+        </div>
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="col-sm-12">
+        <div class="input-group">
+          <span class="input-group-addon">규격</span>
+          <input type="text" name="book_quantity" class="form-control" placeholder="100*190">
+        </div>
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="col-sm-12">
+        <div class="input-group">
+          <span class="input-group-addon">절수</span>
+          <input type="text" name="book_jeolsu" class="form-control" placeholder="24">
+          <span class="input-group-addon">절</span>
+        </div>
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="col-sm-12">
+        <div class="input-group">
+          <span class="input-group-addon">작업</span>
+          <select class="form-control" name="paper_job">
+            <option value="kukjeon" selected="selected">국전</option>
+            <option value="7*5">7*5</option>
+            <option value="nonchoice">없음</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="col-sm-12">
+        <div class="input-group">
+          <span class="input-group-addon">페이지</span>
+          <input type="text" name="book_page" class="form-control" placeholder="24">
+          <span class="input-group-addon">P</span>
+        </div>
+      </div>
+    </div>
+  </fieldset>
+  <fieldset>
+    <legend>인쇄도수 입력</legend>
+    <div class="form-group">
+      <div class="col-sm-12">
+        <div class="input-group">
+          <span class="input-group-addon">앞면</span>
+          <input type="text" name="book_front_dosoo" class="form-control" placeholder="2">
+          <span class="input-group-addon">도</span>
+        </div>
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="col-sm-12">
+        <div class="input-group">
+          <span class="input-group-addon">뒤면</span>
+          <input type="text" name="book_back_dosoo" class="form-control" placeholder="2">
+          <span class="input-group-addon">도</span>
+        </div>
+      </div>
+    </div>
+  </fieldset>
+  <fieldset>
+    <legend>후작업입력</legend>
+    <div class="form-group">
+      <div class="col-sm-12">
+        <div class="input-group">
+          <span class="input-group-addon">제본방법</span>
+          <select class="form-control" name="bookbinding_method">
+            <option value="saddle_stitching" selected="selected">중철</option>
+            <option value="perfect_binding">무선</option>
+            <option value="pur">풀칠</option>
+            <option value="nonchoice">없음</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="col-sm-12">
+        <div class="input-group">
+          <span class="input-group-addon">접지</span>
+          <input type="text" name="book_fold" class="form-control" placeholder="접지횟수">
+          <span class="input-group-addon">번</span>
+        </div>
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="col-sm-12">
+        <div class="input-group">
+          <span class="input-group-addon">코팅</span>
+          <select class="form-control" name="coating_nonshine">
+            <option value="saddle_stitching" selected="selected">무광</option>
+            <option value="coating_shine">유광</option>
+            <option value="nonchoice">없음</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <div class="form-group">
+    <div class="col-sm-12">
+      <div class="input-group">
+        <span class="input-group-addon">톰슨</span>
+        <select class="form-control" name="book_tomson">
+          <option value="no" selected="selected">미사용</option>
+          <option value="yes">사용</option>                        
+            </select>
+            </div>
+            </div>
+            </div>
+            <div class="form-group">
+            <div class="col-sm-12">
+              <div class="input-group">
+                <span class="input-group-addon">재단</span>
+        <select class="form-control" name="book_cuttiong">
+        <option value="no" selected="selected">미사용</option>
+        <option value="yes">사용</option>                        
+        </select>
+        </div>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="col-sm-12">
+          <div class="input-group">
+            <span class="input-group-addon">필름</span>
+            <select class="form-control" name="book_film">
+              <option value="no" selected="selected">미사용</option>
+              <option value="yes">사용</option>
+            </select>
+          </div>
+        </div>
+      </div>
+  </fieldset>
+</form>
+</div>
+<div class="col-sm-4">
+<h4>내지</h4>
+<form class="form-horizontal paper_form_input" id="paper_inside">
+  <fieldset>
+    <legend>용지입력</legend>
+    <div class="form-group">
+      <div class="col-sm-12">
+        <div class="input-group">
+          <span class="input-group-addon">수량</span>
+          <input type="text" name="book_quantity" class="form-control" placeholder="예)3000">
+          <span class="input-group-addon">부</span>
+        </div>
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="col-sm-12">
+        <div class="input-group">
+          <span class="input-group-addon">지종</span>
+          <select class="form-control" name="paper_kind">
+          </select>
+        </div>
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="col-sm-12">
+        <div class="input-group">
+          <span class="input-group-addon">규격</span>
+          <input type="text" name="book_quantity" class="form-control" placeholder="100*190">
+        </div>
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="col-sm-12">
+        <div class="input-group">
+          <span class="input-group-addon">절수</span>
+          <input type="text" name="book_jeolsu" class="form-control" placeholder="24">
+          <span class="input-group-addon">절</span>
+        </div>
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="col-sm-12">
+        <div class="input-group">
+          <span class="input-group-addon">작업</span>
+          <select class="form-control" name="paper_job">
+            <option value="kukjeon" selected="selected">국전</option>
+            <option value="7*5">7*5</option>
+            <option value="nonchoice">없음</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="col-sm-12">
+        <div class="input-group">
+          <span class="input-group-addon">페이지</span>
+          <input type="text" name="book_page" class="form-control" placeholder="24">
+          <span class="input-group-addon">P</span>
+        </div>
+      </div>
+    </div>
+  </fieldset>
+  <fieldset>
+    <legend>인쇄도수 입력</legend>
+    <div class="form-group">
+      <div class="col-sm-12">
+        <div class="input-group">
+          <span class="input-group-addon">앞면</span>
+          <input type="text" name="book_front_dosoo" class="form-control" placeholder="2">
+          <span class="input-group-addon">도</span>
+        </div>
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="col-sm-12">
+        <div class="input-group">
+          <span class="input-group-addon">뒤면</span>
+          <input type="text" name="book_back_dosoo" class="form-control" placeholder="2">
+          <span class="input-group-addon">도</span>
+        </div>
+      </div>
+    </div>
+  </fieldset>
+  <fieldset>
+    <legend>후작업입력</legend>
+    <div class="form-group">
+      <div class="col-sm-12">
+        <div class="input-group">
+          <span class="input-group-addon">제본방법</span>
+          <select class="form-control" name="bookbinding_method">
+            <option value="saddle_stitching" selected="selected">중철</option>
+            <option value="perfect_binding">무선</option>
+            <option value="pur">풀칠</option>
+            <option value="nonchoice">없음</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="col-sm-12">
+        <div class="input-group">
+          <span class="input-group-addon">접지</span>
+          <input type="text" name="book_fold" class="form-control" placeholder="접지횟수">
+          <span class="input-group-addon">번</span>
+        </div>
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="col-sm-12">
+        <div class="input-group">
+          <span class="input-group-addon">코팅</span>
+          <select class="form-control" name="coating_nonshine">
+            <option value="saddle_stitching" selected="selected">무광</option>
+            <option value="coating_shine">유광</option>
+            <option value="nonchoice">없음</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <div class="form-group">
+    <div class="col-sm-12">
+      <div class="input-group">
+        <span class="input-group-addon">톰슨</span>
+        <select class="form-control" name="book_tomson">
+          <option value="no" selected="selected">미사용</option>
+          <option value="yes">사용</option>                        
+            </select>
+            </div>
+            </div>
+            </div>
+            <div class="form-group">
+            <div class="col-sm-12">
+              <div class="input-group">
+                <span class="input-group-addon">재단</span>
+        <select class="form-control" name="book_cuttiong">
+        <option value="no" selected="selected">미사용</option>
+        <option value="yes">사용</option>                        
+        </select>
+        </div>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="col-sm-12">
+          <div class="input-group">
+            <span class="input-group-addon">필름</span>
+            <select class="form-control" name="book_film">
+              <option value="no" selected="selected">미사용</option>
+              <option value="yes">사용</option>
+            </select>
+          </div>
+        </div>
+      </div>
+  </fieldset>
+</form>
+</div>
+<div class="col-sm-4">
+  <h4>엽서</h4>
+  <form class="form-horizontal paper_form_input" id="postcard">
+    <fieldset>
+      <legend>용지입력</legend>
+      <div class="form-group">
+        <div class="col-sm-12">
+          <div class="input-group">
+            <span class="input-group-addon">수량</span>
+            <input type="text" name="book_quantity" class="form-control" placeholder="예)3000">
+            <span class="input-group-addon">부</span>
+          </div>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="col-sm-12">
+          <div class="input-group">
+            <span class="input-group-addon">지종</span>
+            <select class="form-control" name="paper_kind">
+            </select>
+          </div>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="col-sm-12">
+          <div class="input-group">
+            <span class="input-group-addon">규격</span>
+            <input type="text" name="book_quantity" class="form-control" placeholder="100*190">
+          </div>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="col-sm-12">
+          <div class="input-group">
+            <span class="input-group-addon">절수</span>
+            <input type="text" name="book_jeolsu" class="form-control" placeholder="24">
+            <span class="input-group-addon">절</span>
+          </div>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="col-sm-12">
+          <div class="input-group">
+            <span class="input-group-addon">작업</span>
+            <select class="form-control" name="paper_job">
+              <option value="kukjeon" selected="selected">국전</option>
+              <option value="7*5">7*5</option>
+              <option value="nonchoice">없음</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="col-sm-12">
+          <div class="input-group">
+            <span class="input-group-addon">페이지</span>
+            <input type="text" name="book_page" class="form-control" placeholder="24">
+            <span class="input-group-addon">P</span>
+          </div>
+        </div>
+      </div>
+    </fieldset>
+    <fieldset>
+      <legend>인쇄도수 입력</legend>
+      <div class="form-group">
+        <div class="col-sm-12">
+          <div class="input-group">
+            <span class="input-group-addon">앞면</span>
+            <input type="text" name="book_front_dosoo" class="form-control" placeholder="2">
+            <span class="input-group-addon">도</span>
+          </div>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="col-sm-12">
+          <div class="input-group">
+            <span class="input-group-addon">뒤면</span>
+            <input type="text" name="book_back_dosoo" class="form-control" placeholder="2">
+            <span class="input-group-addon">도</span>
+          </div>
+        </div>
+      </div>
+    </fieldset>
+    <fieldset>
+      <legend>후작업입력</legend>
+      <div class="form-group">
+        <div class="col-sm-12">
+          <div class="input-group">
+            <span class="input-group-addon">제본방법</span>
+            <select class="form-control" name="bookbinding_method">
+              <option value="saddle_stitching" selected="selected">중철</option>
+              <option value="perfect_binding">무선</option>
+              <option value="pur">풀칠</option>
+              <option value="nonchoice">없음</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="col-sm-12">
+          <div class="input-group">
+            <span class="input-group-addon">접지</span>
+            <input type="text" name="book_fold" class="form-control" placeholder="접지횟수">
+            <span class="input-group-addon">번</span>
+          </div>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="col-sm-12">
+          <div class="input-group">
+            <span class="input-group-addon">코팅</span>
+            <select class="form-control" name="coating_nonshine">
+              <option value="saddle_stitching" selected="selected">무광</option>
+              <option value="coating_shine">유광</option>
+              <option value="nonchoice">없음</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="col-sm-12">
+          <div class="input-group">
+            <span class="input-group-addon">톰슨</span>
+            <select class="form-control" name="book_tomson">
+              <option value="no" selected="selected">미사용</option>
+              <option value="yes">사용</option>                        
+                </select>
+                </div>
+                </div>
+                </div>
+                <div class="form-group">
+                <div class="col-sm-12">
+                  <div class="input-group">
+                    <span class="input-group-addon">재단</span>
+            <select class="form-control" name="book_cuttiong">
+            <option value="no" selected="selected">미사용</option>
+            <option value="yes">사용</option>                        
+            </select>
+            </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="col-sm-12">
+              <div class="input-group">
+                <span class="input-group-addon">필름</span>
+                <select class="form-control" name="book_film">
+                  <option value="no" selected="selected">미사용</option>
+                  <option value="yes">사용</option>
+                </select>
+              </div>
+            </div>
+          </div>
+    </fieldset>
+  </form>
+  </div>
+  </div>
+
+</div>
