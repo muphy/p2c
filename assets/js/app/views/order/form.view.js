@@ -2,12 +2,9 @@ define(function(require) {
 
     "use strict";
 
-
     var _ = require('underscore');
     require('jquery.tmpl');
     require('jquery.outerhtml');
-    // require('jquery.outerhtml');
-
     require('backbone-nested');
     require('tpl/order/tpl.order.form');
     var FormData = require('models/form.model')
@@ -18,7 +15,8 @@ define(function(require) {
             var calcPaperModel = new CalcPaperModel({
                 page: 2,
                 jeolsu: 9,
-                amount: 1000
+                amount: 1000,
+                daesu: 1
             });
             alert('정미연수:'+calcPaperModel.jeongmiyoensu());
             var PaperkindCollection = require('collections/paperkinds');

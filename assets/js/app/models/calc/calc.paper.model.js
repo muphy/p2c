@@ -10,11 +10,12 @@ define(function(require) {
             page: 1,
             jeolsu: 0,
             amount: 0,
+            daesu: 0,
             dosoo_front: 0,
             dosoo_back: 0
         },
         jeongmiyoensu: function() {
-            // Math.round = IF($C$18 = 0, 0, ROUND(C48 * $C$9 / 500 / $C$18 / 2, 2))
+            // Math.round = IF(jeolsu == 0, 0, ROUND(page * amount / 500 / jeolsu / 2, 2))
             if (this.jeolsu == 0)
                 return 0;
             var page = this.get('page');
@@ -35,6 +36,9 @@ define(function(require) {
         },
         sum: function() {
         	return this.jeongmiyoensu()+this.loss_front()+this.loss_back();
+        },
+        result: function() {
+        	return this.sum()*this.get('daesu');
         },
         loss: function(dosoo) {
             if (dosoo == 0) {
