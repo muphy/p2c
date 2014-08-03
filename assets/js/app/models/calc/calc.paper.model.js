@@ -4,6 +4,7 @@ define(function(require) {
     // Number.prototype.round = function(places) {
     //     return +(Math.round(this + "e+" + places) + "e-" + places);
     // }
+    require('backbone-nested');
     var Backbone = require('backbone');
     var model = Backbone.NestedModel.extend({
         defaults: {
