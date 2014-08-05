@@ -6,7 +6,8 @@ require.config({
         views: '../app/views',
         models: '../app/models',
         collections: '../app/collections',
-        tpl: '../app/tpl'
+        tpl: '../app/tpl',
+        text: 'text'
     },
     shim: {
         'jquery': {

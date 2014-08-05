@@ -21,9 +21,7 @@ define(function(require) {
                 var PaperkindParentView = require('views/admin/paperkinds.parent.view');
                 new PaperkindParentView();
             },
-            'about': function() {
-                alert('about');
-            },
+            'about': 'test_slider',
             contact: function() {
                 alert('contact');
             },
@@ -46,6 +44,14 @@ define(function(require) {
                 App.view.orderFormView = new OrderForm();
             }
             App.view.orderFormView.render();
+        },
+        test_slider: function() {
+            alert('111');
+          if (!App.view.slider) {
+                var Slider = require('slider');
+                App.view.slider = new Slider();
+            }
+            App.view.slider.render().initParam();  
         }
     });
 
