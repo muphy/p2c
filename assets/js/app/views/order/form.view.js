@@ -10,6 +10,7 @@ define(function(require) {
     var FormData = require('models/form.model')
     var FormFragment = require('views/order/form.fragment.view');
     var CalcPaperModel = require('models/calc/calc.paper.model');
+    var StepView = require('views/order/step.view');
     return Backbone.View.extend({
         initialize: function() {
             var calcPaperModel = new CalcPaperModel({
@@ -18,7 +19,7 @@ define(function(require) {
                 amount: 1000,
                 daesu: 1
             });
-            alert('정미연수:'+calcPaperModel.jeongmiyoensu());
+            // alert('정미연수:'+calcPaperModel.jeongmiyoensu());
             var PaperkindCollection = require('collections/paperkinds');
             App.collection.paperkindCollection = new PaperkindCollection();
 
@@ -34,6 +35,8 @@ define(function(require) {
             this.paper_inside_view = new FormFragment({});
 
             this.postcard_view = new FormFragment({});
+
+            this.stepView = new StepView();
         },
         el: '.container.page',
         events: {
@@ -72,6 +75,7 @@ define(function(require) {
             this.paper_cover_view.render();
             this.paper_inside_view.render();
             this.postcard_view.render();
+            this.stepView.render();
             return this;
         }
     });

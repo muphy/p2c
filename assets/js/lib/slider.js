@@ -1,6 +1,7 @@
 "use strict";
 define(function(require) {
     var tpl = require('text!tpl/lib/slider.tpl');
+    var Backbone = require('backbone');
     return Backbone.View.extend({
         initialize: function() {},
         events: {
