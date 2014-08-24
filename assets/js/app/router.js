@@ -39,19 +39,25 @@ define(function(require) {
             App.calResWrapView.render();
         },
         index: function() {
-            if (!App.view.orderFormView) {
-                var OrderForm = require('views/order/form.view');
-                App.view.orderFormView = new OrderForm();
+            // if (!App.view.orderFormView) {
+            //     var OrderForm = require('views/order/form.view');
+            //     App.view.orderFormView = new OrderForm();
+            // }
+            // App.view.orderFormView.render();
+
+            if (!App.view.contnet) {
+                var ContentView = require('views/content.view');
+                App.view.contentView = new ContentView();
             }
-            App.view.orderFormView.render();
+            App.view.contentView.render();
+
         },
         test_slider: function() {
-            alert('111');
-          if (!App.view.slider) {
+            if (!App.view.slider) {
                 var Slider = require('slider');
                 App.view.slider = new Slider();
             }
-            App.view.slider.render().initParam();  
+            App.view.slider.render().initParam();
         }
     });
 

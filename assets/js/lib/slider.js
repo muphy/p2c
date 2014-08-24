@@ -17,7 +17,7 @@ define(function(require) {
         moveLeft: function(e) {
             $('#slider ul').animate({
                 left: +this.slideWidth
-            }, 200, function() {
+            }, 400, function() {
                 $('#slider ul li:last-child').prependTo('#slider ul');
                 $('#slider ul').css('left', '');
             });
@@ -27,7 +27,7 @@ define(function(require) {
         moveRight: function(e) {
             $('#slider ul').animate({
                 left: -this.slideWidth
-            }, 200, function() {
+            }, 400, function() {
                 $('#slider ul li:first-child').appendTo('#slider ul');
                 $('#slider ul').css('left', '');
             });
