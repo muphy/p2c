@@ -25,6 +25,9 @@ require.config({
         },
         'jquery.tmpl': {
             deps: ['jquery']
+        },
+        'underscore': {
+            exports: '_'
         }
     }
 });

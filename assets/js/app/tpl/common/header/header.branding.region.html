@@ -1,0 +1,44 @@
+<div class="header" data-toggle="clingify">
+  <div class="header-inner container">
+    <div class="navbar">
+      <div class="pull-left">
+        <!--branding/logo-->
+        <a class="navbar-brand" href="index.htm" title="Home">
+          <h1>
+            <span>App</span>Strap<span>.</span>
+          </h1>
+        </a>
+        <div class="slogan">Responsive HTML Theme</div>
+      </div>
+    
+    <!-- mobile collapse menu button - data-toggle="toggle" = default BS menu - data-toggle="jpanel-menu" = jPanel Menu -->
+    <a href="#top" class="navbar-btn" data-toggle="jpanel-menu" data-target=".navbar-collapse" data-direction="right"><i class="fa fa-bars"></i></a>
+    
+    <!--everything within this div is collapsed on mobile-->
+    <div class="navbar-collapse collapse">
+      <!--main navigation-->
+      <ul class="nav navbar-nav">
+        <li class="home-link active">
+          <a href="#"><i class="fa fa-home"></i><span class="hidden">Home</span></a>
+        </li>
+        
+        <li class="dropdown">
+          <a href="#about" class="dropdown-toggle" >알아보기</a> 
+        </li>
+        <li class="dropdown">
+          <a href="#contact" class="dropdown-toggle">연락하기</a> 
+        </li>                                        
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" id="more-drop" data-toggle="dropdown" data-hover="dropdown">관리자</a> 
+          <!-- Mega Menu -->
+          <ul class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="more-drop">
+            <li role="presentation"><a role="menuitem" href="#admin/jeolsu" tabindex="-1" class="menu-item">절수변경</a></li>
+            <li role="presentation"><a role="menuitem" href="#admin/paperkind" tabindex="-1" class="menu-item">지류관리</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <!--/.navbar-collapse -->
+  </div>
+</div>
+</div>

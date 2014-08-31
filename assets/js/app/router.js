@@ -45,11 +45,11 @@ define(function(require) {
             // }
             // App.view.orderFormView.render();
 
-            if (!App.view.contnet) {
-                var ContentView = require('views/content.view');
-                App.view.contentView = new ContentView();
+            if (!App.view.bodyView) {
+                var bodyView = require('views/main/body.view');
+                App.view.bodyView = new bodyView();
             }
-            App.view.contentView.render();
+            App.view.bodyView.render();
 
         },
         test_slider: function() {
