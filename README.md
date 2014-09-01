@@ -18,12 +18,14 @@ You will want to configure your Mongo DB in config/adapters.js
     }
 
 install guide 
+
     1.install mongodb
     2.install python >= 2.7
 	3.install sailsjs
-         npm install excel-parser
+        npm install excel-parser
 	
 javascript plugin
+
     http://bxslider.com/
 	http://handsontable.com/
 	 
