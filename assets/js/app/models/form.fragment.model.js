@@ -1,8 +1,8 @@
 define(function(require) {
 
     "use strict";
-
-    var Backbone = require('backbone');
+    require('backbone-nested');
+    // var Backbone = require('backbone');
     var model = Backbone.NestedModel.extend({
         defaults: {
             book_quantity: 1,

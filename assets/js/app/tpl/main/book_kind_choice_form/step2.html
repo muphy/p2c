@@ -1,110 +1,176 @@
-<!-- Services -->
 <div class="block features">
-    <h3 class="title-divider">
-      <span>Bonus <span class="de-em">Features</span></span>
-      <small>Bonus features only included in our Pro &amp; Pro + plans.</small>
-    </h3>
-    <div class="row">
-      <!-- Secondary features -->
-      <div class="col-md-9">
-        <div class="tabbable tabs-left vertical-tabs bold-tabs row">
-          <ul class="nav nav-tabs nav-stacked col-sm-4 col-md-4">
-            <li class="active">
-              <a href="#tab1" data-toggle="tab">
-                Mobile Friendly 
-                <small>Cause mobile matters</small>
-                <i class="fa fa-angle-right"></i>
-              </a>
-            </li>
-            <li class="">
-              <a href="#tab2" data-toggle="tab">
-                24/7 Support 
-                <small>When you need it most</small>
-                <i class="fa fa-angle-right"></i>
-              </a>
-            </li>
-            <li class="">
-              <a href="#tab3" data-toggle="tab">
-                Upgrade Assistance 
-                <small>FREE upgrades for life!</small>
-                <i class="fa fa-angle-right"></i>
-              </a>
-            </li>
-            <li class="">
-              <a href="#tab4" data-toggle="tab">
-                99.9% Uptime 
-                <small>Rhoncus adipiscing</small>
-                <i class="fa fa-angle-right"></i>
-              </a>
-            </li>
-          </ul>
-          <div class="tab-content col-sm-8 col-md-8">
-            <div class="feature tab-pane col-sm-12 col-md-12 active" id="tab1">
-              <img src="img/features/feature-1.png" alt="Feature 1" class="img-responsive">
-              <h3 class="title visible-phone">
-                Mobile Friendly
-              </h3>
-              <!--only show on mobile when tabs are open-->
-              <p>Rhoncus adipiscing, magna integer cursus augue eros lacus porttitor magna. Dictumst, odio! Elementum tortor sociis in eu dis dictumst pulvinar lorem nec aliquam a nascetur.</p>
-              <p>Rhoncus adipiscing, magna integer cursus augue eros lacus porttitor magna. </p>
+  <h3 class="title-divider">
+    <span>표지 <span class="de-em">수치입력</span></span>
+    <small>아래 표지수치를 입력하세요.</small>
+  </h3>
+  <div class="row">
+    <!-- Secondary features -->
+    <div class="col-md-9">
+      <div class="tabbable tabs-left vertical-tabs bold-tabs row">
+        <ul class="nav nav-tabs nav-stacked col-sm-4 col-md-4">
+          <li class="active">
+            <a href="#tab1" data-toggle="tab">
+              용지입력 
+              <small>용지입력</small>
+              <i class="fa fa-angle-right"></i>
+            </a>
+          </li>
+          <li class="">
+            <a href="#tab2" data-toggle="tab">
+              인쇄도수 입력
+              <small>인쇄도수 입력</small>
+              <i class="fa fa-angle-right"></i>
+            </a>
+          </li>
+          <li class="">
+            <a href="#tab3" data-toggle="tab">
+              후작업입력
+              <small>후작업입력</small>
+              <i class="fa fa-angle-right"></i>
+            </a>
+          </li>
+        </ul>
+        <div class="tab-content col-sm-8 col-md-8">
+          <div class="feature tab-pane col-sm-12 col-md-12 active" id="tab1">
+            <div class="form-group">
+              <div class="col-sm-12">
+                <div class="input-group">
+                  <span class="input-group-addon">수량</span>
+                  <input type="text" name="book_quantity" class="form-control" value="<%= book_quantity %>" placeholder="예)3000">
+                  <span class="input-group-addon">부</span>
+                </div>
+              </div>
             </div>
-            <div class="feature tab-pane col-sm-12 col-md-12" id="tab2">
-              <img src="img/features/feature-2.png" alt="Feature 2" class="img-responsive">
-              <h3 class="title visible-phone">
-                24/7 Support
-              </h3>
-              <!--only show on mobile when tabs are open-->
-              <p>Rhoncus adipiscing, magna integer cursus augue eros lacus porttitor magna. Dictumst, odio! Elementum tortor sociis in eu dis dictumst pulvinar lorem nec aliquam a nascetur.</p>
-              <p>Rhoncus adipiscing, magna integer cursus augue eros lacus porttitor magna. </p>
+            <div class="form-group">
+              <div class="col-sm-12">
+                <div class="input-group">
+                  <span class="input-group-addon">지종</span>
+                  <select class="form-control" name="paper_kind">
+                  <% _.each( paperkinds, function( paperkind ){ %>
+                    <option value="<%- paperkind.id %>"><%- paperkind.name %></option>
+                  <% }); %>
+                  </select>
+                </div>
+              </div>
             </div>
-            <div class="feature tab-pane col-sm-12 col-md-12" id="tab3">
-              <img src="img/features/feature-3.png" alt="Feature 3" class="img-responsive">
-              <h3 class="title visible-phone">
-                Upgrade Assistance
-              </h3>
-              <!--only show on mobile when tabs are open-->
-              <p>Rhoncus adipiscing, magna integer cursus augue eros lacus porttitor magna. Dictumst, odio! Elementum tortor sociis in eu dis dictumst pulvinar lorem nec aliquam a nascetur.</p>
-              <p>Rhoncus adipiscing, magna integer cursus augue eros lacus porttitor magna. </p>
+            <div class="form-group">
+              <div class="col-sm-12">
+                <div class="input-group">
+                  <span class="input-group-addon">규격</span>
+                  <input type="text" name="book_standard" class="form-control" value="<%= book_standard %>" placeholder="100*190">
+                </div>
+              </div>
             </div>
-            <div class="feature tab-pane col-sm-12 col-md-12" id="tab4">
-              <img src="img/features/feature-4.png" alt="Feature 4" class="img-responsive">
-              <h3 class="title visible-phone">
-                99.9% Uptime
-              </h3>
-              <!--only show on mobile when tabs are open-->
-              <p>Rhoncus adipiscing, magna integer cursus augue eros lacus porttitor magna. Dictumst, odio! Elementum tortor sociis in eu dis dictumst pulvinar lorem nec aliquam a nascetur.</p>
-              <p>Rhoncus adipiscing, magna integer cursus augue eros lacus porttitor magna. </p>
+            <div class="form-group">
+              <div class="col-sm-12">
+                <div class="input-group">
+                  <span class="input-group-addon">절수</span>
+                  <input type="text" name="book_jeolsu" class="form-control" value="<%= book_jeolsu %>" placeholder="24">
+                  <span class="input-group-addon">절</span>
+                </div>
+              </div>
             </div>
-          </div>
-        </div>
-      </div>
-      <!--Contact block-->
-      <div class="col-md-3">
-        <h3 class="title-divider">
-          <span>Questions?</span> 
-          <small>Get in touch!</small>
-        </h3>
-        <p>
-          <abbr title="Phone"><i class="fa fa-phone"></i></abbr>
-          019223 8092344
-        </p>
-        <p>
-          <abbr title="Email"><i class="fa fa-envelope"></i></abbr>
-          info@themelize.me
-        </p>
-        <p>
-          <abbr title="Address"><i class="fa fa-home"></i></abbr>
-          Sunshine House, Sunville. SUN12 8LU.
-        </p>
-        <form id="callback-form" action="#" class="bordered-top-medium" role="form">
-          <div class="input-group">
-            <label class="sr-only" for="callback-number">Your Number</label>
-            <input type="tel" class="form-control" id="callback-number" placeholder="Your Number">
-            <span class="input-group-btn">
-              <button class="btn btn-primary" type="button">Get Callback</button>
-            </span>
-          </div>
-        </form>
-      </div>
-    </div>
-  </div>
+            <div class="form-group">
+              <div class="col-sm-12">
+                <div class="input-group">
+                  <span class="input-group-addon">페이지</span>
+                  <input type="text" name="book_page" class="form-control" placeholder="2" value="<%= book_page %>">
+                  <span class="input-group-addon">P</span>
+                </div>
+              </div>
+            </div>
+          </div><!--tab1 용지 입력 end-->
+          <div class="feature tab-pane col-sm-12 col-md-12" id="tab2">
+            <div class="form-group">
+              <div class="col-sm-12">
+                <div class="input-group">
+                  <span class="input-group-addon">앞면</span>
+                  <input type="text" name="book_front_dosoo" class="form-control" placeholder="2" value="<%= book_front_dosoo %>">
+                  <span class="input-group-addon">도</span>
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="col-sm-12">
+                <div class="input-group">
+                  <span class="input-group-addon">뒤면</span>
+                  <input type="text" name="book_back_dosoo" class="form-control" placeholder="2" value="<%= book_back_dosoo %>">
+                  <span class="input-group-addon">도</span>
+                </div>
+              </div>
+            </div>
+          </div><!--tab2 인쇄도수 end-->
+          <div class="feature tab-pane col-sm-12 col-md-12" id="tab3">
+            <div class="form-group">
+              <div class="col-sm-12">
+                <div class="input-group">
+                  <span class="input-group-addon">제본방법</span>
+                  <select class="form-control" name="bookbinding_method">
+                    <option value="saddle_stitching" selected="selected">중철</option>
+                    <option value="perfect_binding">무선</option>
+                    <option value="pur">풀칠</option>
+                    <option value="nonchoice">없음</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="col-sm-12">
+                <div class="input-group">
+                  <span class="input-group-addon">접지</span>
+                  <input type="text" name="book_fold" class="form-control" value="<%= book_fold %>"placeholder="접지횟수">
+                  <span class="input-group-addon">번</span>
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="col-sm-12">
+                <div class="input-group">
+                  <span class="input-group-addon">코팅</span>
+                  <select class="form-control" name="coating_nonshine">
+                    <option value="saddle_stitching" selected="selected">무광</option>
+                    <option value="coating_shine">유광</option>
+                    <option value="nonchoice">없음</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="col-sm-12">
+                <div class="input-group">
+                  <span class="input-group-addon">톰슨</span>
+                  <select class="form-control" name="book_tomson">
+                    <option value="no" selected="selected">미사용</option>
+                    <option value="yes">사용</option>                        
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="col-sm-12">
+                <div class="input-group">
+                  <span class="input-group-addon">재단</span>
+                  <select class="form-control" name="book_cuttiong">
+                    <option value="no" selected="selected">미사용</option>
+                    <option value="yes">사용</option>                        
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="col-sm-12">
+                <div class="input-group">
+                  <span class="input-group-addon">필름</span>
+                  <select class="form-control" name="book_film">
+                    <option value="no" selected="selected">미사용</option>
+                    <option value="yes">사용</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div><!--tab3  end-->
+        </div><!-- tabcontents -->
+      </div><!-- tabbable -->
+    </div><!-- col-md-9 -->
+  </div><!-- row end -->
+</div><!-- block end -->

@@ -45,6 +45,7 @@
     <!-- Theme style -->
     <link href="/styles/css/theme-style.min.css" rel="stylesheet">
     <link href="/styles/plugins/jquery.bxslider.css" rel="stylesheet">
+    <link href="/styles/css/custom-componnets.css" rel="stylesheet">
     
     <!-- link rel="stylesheet" href="/styles/p2c.css" -->
     <!-- link rel="stylesheet" href="/styles/theme-style.css" -->
@@ -75,8 +76,15 @@
 
 <!-- ======== @Region: #content ======== -->
 <div id="content">
+  <div id="step-breadcums" class="wizard">
+    <a class="current"><span class="badge">1</span> 인쇄물 종류선택</a>
+    <a><span class="badge">2</span> 수치입력</a>
+    <a><span class="badge">3</span> 계산결과</a>
+    <a><span class="badge">4</span> 임시</a> 
+  </div>
   <div id="book_kind_choice_form_wrap" class="container content-wrap">
   </div>
+  <div class="post-to-post-pager"> <a href="#" class="btn btn-primary previous">← 이전단계</a> <a href="#" class="btn btn-primary next">다음단계 →</a> </div>
 </div>
 
 <!-- ======== @Region: #content-below ======== -->

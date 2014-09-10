@@ -4,13 +4,22 @@ define(function(require) {
     var tpl = require('text!tpl/main/book_kind_choice_form/book_kind_choice_form.html');
     var step1 = require('views/main/book_kind_choice_form/step1.view');
     var step2 = require('views/main/book_kind_choice_form/step2.view');
+    var PaperkindCollection = require('collections/paperkinds');
+    var JeolsuCollection = require('models/admin/jeolsucol');
     require('jquery.bxslider');
     return Backbone.View.extend({
         initialize: function() {
-
+            this.paperkindCollection = new PaperkindCollection();
+            this.jeolsuCollection = new JeolsuCollection();
+            this.jeolsuCollection.changeUrl('all');
+            this.getData();
         },
         events: {
 
+        },
+        getData: function() {
+            this.paperkindCollection.fetch({});
+            this.jeolsuCollection.fetch({});
         },
         el: '#book_kind_choice_form_wrap',
         template: _.template(tpl),
@@ -33,10 +42,13 @@ define(function(require) {
         render: function() {
             this.$el.prepend(this.template());
             this.addStep1();
-            // this.addStep2();
-            // this.tickBxSlider();
-
             return this;
+        },
+        goToPrev: function() {
+            this.bsSlider.goToPrevSlide();
+        },
+        goToNext: function() {
+            this.bsSlider.goToNextSlide();
         },
         buildPiece: function(type) {
             // alert(type);
@@ -67,8 +79,11 @@ define(function(require) {
             if (this.bsSlider) {
                 this.bsSlider.destroySlider();
             }
+            // alert(this.$el.find('.bxslider').length);
             this.bsSlider = this.$el.find('.bxslider').bxSlider({
-                infiniteLoop: false
+                infiniteLoop: false,
+                pager: false,
+                controls: false
             });
         },
     });
