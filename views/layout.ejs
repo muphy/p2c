@@ -76,15 +76,15 @@
 
 <!-- ======== @Region: #content ======== -->
 <div id="content">
-  <div id="step-breadcums" class="wizard">
-    <a class="current"><span class="badge">1</span> 인쇄물 종류선택</a>
-    <a><span class="badge">2</span> 수치입력</a>
-    <a><span class="badge">3</span> 계산결과</a>
-    <a><span class="badge">4</span> 임시</a> 
+  <div id="content-wrap" class="container content-wrap">
+    <div id="step-breadcums" class="wizard">
+    </div>
+    <div id="book_kind_choice_form_wrap" class="container content-wrap"></div>
+    <div id="process-pager" class="post-to-post-pager">
+        <a href="#" class="btn btn-primary previous">← 이전단계</a>
+        <a href="#" class="btn btn-primary next">다음단계 →</a>
+    </div>
   </div>
-  <div id="book_kind_choice_form_wrap" class="container content-wrap">
-  </div>
-  <div class="post-to-post-pager"> <a href="#" class="btn btn-primary previous">← 이전단계</a> <a href="#" class="btn btn-primary next">다음단계 →</a> </div>
 </div>
 
 <!-- ======== @Region: #content-below ======== -->
@@ -92,8 +92,8 @@
   <div class="container">
     <div class="row">
       <div class="upsell">
-        <small class="muted">99.9% Uptime <span class="spacer">//</span> Free upgrade assistence <span class="spacer">//</span> 24/7 Support <span class="spacer">//</span> Plans from $19.99/month <span class="spacer">//</span> </small>
-        <a href="pricing.htm" class="btn btn-primary">Start your Free Trial Today! <i class="fa fa-arrow-right"></i></a>
+<!--         <small class="muted">99.9% Uptime <span class="spacer">//</span> Free upgrade assistence <span class="spacer">//</span> 24/7 Support <span class="spacer">//</span> Plans from $19.99/month <span class="spacer">//</span> </small>
+        <a href="pricing.htm" class="btn btn-primary">Start your Free Trial Today! <i class="fa fa-arrow-right"></i></a> -->
       </div>
     </div>
   </div>
@@ -108,7 +108,7 @@
         <div class="block contact-block">
           <!--@todo: replace with company contact details-->
           <h3>
-            Contact Us
+            연락하기
           </h3>
           <address>
             <ul class="fa-ul">
@@ -118,11 +118,11 @@
               </li>
               <li>
                 <abbr title="Email"><i class="fa fa-li fa-envelope"></i></abbr>
-                info@appstraptheme.com
+                shinemuphy@gmail.com
               </li>
               <li>
                 <abbr title="Address"><i class="fa fa-li fa-home"></i></abbr>
-                Sunshine House, Sunville. SUN12 8LU.
+                사무실 없음
               </li>
             </ul>
           </address>
@@ -132,18 +132,18 @@
       <div class="col-md-5 col">
         <div class="block">
           <h3>
-            About Us
+            우리팀
           </h3>
-          <p>Making the web a prettier place one template at a time! We make beautiful, quality, responsive Drupal & web templates!</p>
+          <p>We are making the world better place. Oh and Bae</p>
         </div>
       </div>
       
       <div class="col-md-4 col">
         <div class="block newsletter">
           <h3>
-            Newsletter
+            소식받기
           </h3>
-          <p>Stay up to date with our latest news and product releases by signing up to our newsletter.</p>
+          <p>소식받기를 원하시면 메일로 연락하세요.</p>
           <!--@todo: replace with mailchimp code-->
           <form role="form">
             <div class="input-group input-group-sm">
@@ -160,7 +160,7 @@
     
     <div class="row">
       <div id="toplink">
-        <a href="#top" class="top-link" title="Back to top">Back To Top <i class="fa fa-chevron-up"></i></a>
+        <a href="#top" class="top-link" title="Back to top">위로<i class="fa fa-chevron-up"></i></a>
       </div>
       <!--@todo: replace with company copyright details-->
       <div class="subfooter">
@@ -169,9 +169,9 @@
         </div>
         <div class="col-md-6">
           <ul class="list-inline footer-menu">
-            <li><a href="#">Terms</a></li>
-            <li><a href="#">Privacy</a></li>
-            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">약관</a></li>
+            <li><a href="#">개인보호정책</a></li>
+            <li><a href="#">연락하기</a></li>
           </ul>
         </div>
       </div>
