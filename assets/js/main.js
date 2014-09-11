@@ -28,7 +28,10 @@ require.config({
         },
         'underscore': {
             exports: '_'
-        }
+        },
+        'jquery.bxslider': {
+            deps: ['jquery']
+        },
     }
 });
 window.App = {
