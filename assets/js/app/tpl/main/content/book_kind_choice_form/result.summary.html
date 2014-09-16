@@ -1,0 +1,60 @@
+<table class="table table-bordered">
+    <thead>
+    </thead>
+    <tbody>
+        <tr>
+            <td colspan="7"></td>
+            <td>표지</td>
+            <td>내지</td>
+            <td>엽서</td>
+        </tr>
+        <tr>
+            <td colspan="2">품 명</td>
+            <td colspan="4"><%= product_name %></td>
+            <td>페이지</td>
+            <td><%= paper_cover.book_page %>p</td>
+            <td><%= paper_inside.book_page %>p</td>
+            <td><%= postcard.book_page %>p</td>
+        </tr>
+        <tr>
+            <td colspan="2">규 격</td>
+            <td colspan="4">${paper_cover.book_standard}</td>
+            <td>작 업</td>
+            <td>${paper_cover.paper_job.name}</td>
+            <td>${paper_inside.paper_job.name}</td>
+            <td>${postcard.paper_job.name}</td>
+        </tr>
+        <tr>
+            <td colspan="2">수 량</td>
+            <td colspan="4">${paper_cover.book_quantity}부</td>
+            <td>필 름</td>
+            <td>${filmNum}판</td>
+            <td>${filmNum}판</td>
+            <td>${filmNum}판</td>
+        </tr>
+        <tr>
+            <td colspan="2">제 본</td>
+            <td colspan="4">x</td>
+            <td>인쇄판</td>
+            <td>8 판</td>
+            <td>4 판</td>
+            <td>0 판</td>
+        </tr>
+        <tr>
+            <td colspan="2">접 지</td>
+            <td colspan="4">1회</td>
+            <td>코 팅</td>
+            <td>x</td>
+            <td>x</td>
+            <td>x</td>
+        </tr>
+        <tr>
+            <td colspan="2">재 단</td>
+            <td colspan="4">x</td>
+            <td>톰슨</td>
+            <td>o</td>
+            <td>o</td>
+            <td>c</td>
+        </tr>
+    </tbody>
+</table>

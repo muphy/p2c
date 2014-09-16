@@ -123,7 +123,7 @@ define(function(require) {
         template: function() {
             var compiled = _.template(tpl);
             this.model.set('paperkinds',this.wrap.paperkindCollection.toJSON());
-            console.log(this.model.toJSON());
+            // console.log(this.model.toJSON());
             return compiled(this.model.toJSON());
         },
         render: function() {

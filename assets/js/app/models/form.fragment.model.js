@@ -42,10 +42,15 @@ define(function(require) {
             this.options = options;
         },
         calcurate: function() {
-            var book_jeolsu = Number(book_jeolsu);
-            var book_page = Number(book_page);
-            var book_front_dosoo = Number(book_front_dosoo);
-            var book_back_dosoo = Number(book_back_dosoo);
+            var filmNum = this.getFilmNum();
+            this.set({filmNum:filmNum});
+            return filmNum;
+        },
+        getFilmNum: function() {
+            var book_jeolsu = Number(this.get('book_jeolsu'));
+            var book_page = Number(this.get('book_page'));
+            var book_front_dosoo = Number(this.get('book_front_dosoo'));
+            var book_back_dosoo = Number(this.get('book_back_dosoo'));
             var logic = this.findLogic(book_jeolsu, book_page);
             var hongPanNum = logic.hongPanNum;
             var donPanNum = logic.donPanNum;
