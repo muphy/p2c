@@ -5,6 +5,7 @@ define(function(require) {
     return Backbone.View.extend({
         initialize: function(options) {
             this.options = options || {};
+            this.wrapper = this.options.wrapper;//book.kind.choice.form.view
         },
         events: {
             'click a' : 'chooseKindOfBook'
@@ -14,7 +15,7 @@ define(function(require) {
         chooseKindOfBook: function(e) {
             e.preventDefault(e);
             var type = $(e.target).data('type');
-            this.options.wrapper.buildSteps(type);
+            this.wrapper.buildSteps(type);
         },
         render: function() {
             this.$el.append(this.template());

@@ -39,12 +39,6 @@ define(function(require) {
             App.calResWrapView.render();
         },
         index: function() {
-            // if (!App.view.orderFormView) {
-            //     var OrderForm = require('views/order/form.view');
-            //     App.view.orderFormView = new OrderForm();
-            // }
-            // App.view.orderFormView.render();
-
             if (!App.view.bodyView) {
                 var bodyView = require('views/main/body.view');
                 App.view.bodyView = new bodyView();

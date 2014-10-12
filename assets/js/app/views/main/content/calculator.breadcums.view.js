@@ -11,18 +11,22 @@ define(function(require) {
         },
         el: '#step-breadcums',
         increseStep: function() {
-            console.log(this.$el.length);
-            console.log(this.$el.find('a.current').length);
-            console.log(this.$el.find('a.current').next().length);
-            this.$el.find('.current').removeClass('current').next().addClass('current');
-            this.currentStep--;
+            // console.log(this.$el.length);
+            // console.log(this.$el.find('a.current').length);
+            // console.log(this.$el.find('a.current').next().length);
+            if (this.currentStep < 4) {
+                this.$el.find('.current').removeClass('current').next().addClass('current');
+                this.currentStep++;
+            }
         },
         decreseStep: function() {
-            console.log(this.$el.length);
-            console.log(this.$el.find('a.current').length);
-            console.log(this.$el.find('a.current').next().length);
-            this.$el.find('.current').removeClass('current').prev().addClass('current');
-            this.currentStep++;
+            // console.log(this.$el.length);
+            // console.log(this.$el.find('a.current').length);
+            // console.log(this.$el.find('a.current').next().length);
+            if (this.currentStep < 1) {
+                this.$el.find('.current').removeClass('current').prev().addClass('current');
+                this.currentStep--;
+            }
         },
         renderPiece: function() {
             // this.$el.empty();

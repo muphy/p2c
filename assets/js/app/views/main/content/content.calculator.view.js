@@ -39,6 +39,7 @@ define(function(require) {
         },
         render: function() {
             this.book_kind_choice_form_view.render();
+            this.calculator_breadcums_view.render('piece')
             return this;
         },
     });
